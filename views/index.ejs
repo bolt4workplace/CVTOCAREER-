@@ -4,21 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title><%= data.siteTitle %></title>
-  <link rel="icon" type="image/jpeg" href="/images/WhatsApp_Image_2026-07-27_at_8.23.38_AM.jpeg" />
-
   <meta property="og:type" content="website" />
   <meta property="og:title" content="<%= data.siteTitle %>" />
-  <meta property="og:description" content="You have been selected for an interview. Please review your invitation details below." />
-  <meta property="og:image" content="https://i.imgur.com/i64cb8Z.jpeg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <meta property="og:description" content="You have been selected for a procurement meeting. Please review your invitation details below." />
   <meta property="og:url" content="/" />
-  <meta property="og:site_name" content="CVTOCAREER" />
+  <meta property="og:site_name" content="Bizmatch" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="<%= data.siteTitle %>" />
-  <meta name="twitter:description" content="You have been selected for an interview. Please review your invitation details below." />
-  <meta name="twitter:image" content="/og-preview.jpg" />
+  <meta name="twitter:description" content="You have been selected for a procurement meeting. Please review your invitation details below." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -48,15 +42,28 @@
           <span class="ornament-line right"></span>
         </div>
 
-        <!-- ── LOGO: replace the src below with your logo image link ── -->
+        <!-- ── Bizmatch Logo ── -->
         <div class="deco-flower">
-          <img src="https://i.imgur.com/MQ72Xyb.png"
-               alt="CVTOCAREER"
-               loading="lazy" />
+          <svg viewBox="0 0 240 64" xmlns="http://www.w3.org/2000/svg" aria-label="Bizmatch">
+            <defs>
+              <linearGradient id="bizmark-grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#0B3D5C"/>
+                <stop offset="100%" stop-color="#082B42"/>
+              </linearGradient>
+              <linearGradient id="biztext-grad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#0B3D5C"/>
+                <stop offset="100%" stop-color="#082B42"/>
+              </linearGradient>
+            </defs>
+            <rect x="2" y="8" width="48" height="48" rx="12" fill="url(#bizmark-grad)"/>
+            <path d="M20 18 L34 18 C38 18 41 20 41 24 C41 27 39 29 37 30 C40 31 42 33 42 37 C42 41 38 44 34 44 L20 44 Z M26 24 L26 28 L33 28 C34 28 35 26 35 25 C35 24 34 24 33 24 Z M26 33 L26 38 L33 38 C35 38 36 37 36 35 C36 34 35 33 33 33 Z" fill="#FFFFFF"/>
+            <path d="M24 18 L34 18 C38 18 41 20 41 24 C41 27 39 29 37 30 C40 31 42 33 42 37 C42 41 38 44 34 44 L24 44" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" fill="none"/>
+            <text x="60" y="42" font-family="Inter,sans-serif" font-size="26" font-weight="800" fill="url(#biztext-grad)" letter-spacing="-0.5">Bizmatch</text>
+          </svg>
         </div>
 
         <!-- Eyebrow -->
-        <p class="eyebrow">Interview Invitation</p>
+        <p class="eyebrow">Meeting Invitation</p>
 
         <!-- Heading -->
         <h1 class="panel-title" id="page-heading"><%= data.heading %></h1>
@@ -73,7 +80,7 @@
         </a>
 
         <!-- Countdown -->
-        <div class="countdown" id="countdown" data-target="<%= data.countdownTarget %>" aria-label="Countdown to interview">
+        <div class="countdown" id="countdown" data-target="<%= data.countdownTarget %>" aria-label="Countdown to meeting">
           <div class="cd-unit">
             <span class="cd-num" id="cd-mo">0</span>
             <span class="cd-label">mo</span>

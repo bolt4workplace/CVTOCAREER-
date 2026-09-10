@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 :root {
-  /* CVTOCAREER Brand palette */
-  --blue:        #0D548B;
-  --blue-mid:    #1A6BAA;
-  --blue-light:  #3A8BC8;
-  --blue-pale:   #E8F2FA;
-  --blue-ghost:  #F4F9FD;
+  /* Bizmatch Brand palette */
+  --blue:        #082B42;
+  --blue-mid:    #0B3D5C;
+  --blue-light:  #1A5980;
+  --blue-pale:   #D4E4F0;
+  --blue-ghost:  #EAF1F6;
 
   --white:       #FFFFFF;
   --off-white:   #FAFCFE;
@@ -17,13 +17,13 @@
   --ink-soft:    #4A6178;
   --ink-faint:   #8BA0B5;
 
-  --border:      rgba(13, 84, 139, 0.12);
-  --border-mid:  rgba(13, 84, 139, 0.22);
+  --border:      rgba(8, 43, 66, 0.12);
+  --border-mid:  rgba(8, 43, 66, 0.22);
 
-  --shadow-sm:   0 2px 12px rgba(13, 84, 139, 0.08);
-  --shadow-md:   0 8px 32px rgba(13, 84, 139, 0.12);
-  --shadow-lg:   0 24px 64px rgba(13, 84, 139, 0.16);
-  --shadow-xl:   0 40px 100px rgba(13, 84, 139, 0.2);
+  --shadow-sm:   0 2px 12px rgba(8, 43, 66, 0.08);
+  --shadow-md:   0 8px 32px rgba(8, 43, 66, 0.12);
+  --shadow-lg:   0 24px 64px rgba(8, 43, 66, 0.16);
+  --shadow-xl:   0 40px 100px rgba(8, 43, 66, 0.2);
 
   --radius-xl:   28px;
   --radius-lg:   20px;
@@ -61,7 +61,7 @@ body {
   inset: 0;
   z-index: 0;
   background:
-    linear-gradient(135deg, rgba(10,30,52,0.78) 0%, rgba(13,84,139,0.55) 50%, rgba(10,26,42,0.82) 100%),
+    linear-gradient(135deg, rgba(6,24,40,0.82) 0%, rgba(8,43,66,0.6) 50%, rgba(6,20,34,0.85) 100%),
     url('https://images.pexels.com/photos/10410074/pexels-photo-10410074.jpeg?auto=compress&cs=tinysrgb&w=1920') center center / cover no-repeat;
   pointer-events: none;
 }
@@ -71,8 +71,8 @@ body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 60% 50% at 50% 30%, rgba(13,84,139,0.15) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 40% at 50% 100%, rgba(10,26,42,0.4) 0%, transparent 60%);
+    radial-gradient(ellipse 60% 50% at 50% 30%, rgba(8,43,66,0.15) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 50% 100%, rgba(6,20,34,0.4) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -132,7 +132,7 @@ body {
   z-index: 10;
   width: 100%;
   height: var(--header-h);
-  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 50%, #0A4674 100%);
+  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 50%, #051E30 100%);
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -161,7 +161,7 @@ body {
   z-index: 10;
   width: 100%;
   height: var(--header-h);
-  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 50%, #0A4674 100%);
+  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 50%, #051E30 100%);
   flex-shrink: 0;
   overflow: hidden;
 }
@@ -270,8 +270,8 @@ body {
   inset: 0;
   border-radius: inherit;
   background-image:
-    linear-gradient(rgba(13,84,139,0.018) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(13,84,139,0.018) 1px, transparent 1px);
+    linear-gradient(rgba(8,43,66,0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(8,43,66,0.018) 1px, transparent 1px);
   background-size: 40px 40px;
   pointer-events: none;
   z-index: 0;
@@ -387,8 +387,8 @@ body {
   border-radius: 999px;
   cursor: pointer;
   box-shadow:
-    0 8px 28px rgba(13,84,139,0.35),
-    0 2px 6px rgba(13,84,139,0.2),
+    0 8px 28px rgba(8,43,66,0.35),
+    0 2px 6px rgba(8,43,66,0.2),
     inset 0 1px 0 rgba(255,255,255,0.2);
   transition:
     background-position var(--transition),
@@ -415,8 +415,8 @@ body {
   background-position: 100% 100%;
   transform: translateY(-2px);
   box-shadow:
-    0 16px 44px rgba(13,84,139,0.45),
-    0 4px 10px rgba(13,84,139,0.25),
+    0 16px 44px rgba(8,43,66,0.45),
+    0 4px 10px rgba(8,43,66,0.25),
     inset 0 1px 0 rgba(255,255,255,0.25);
 }
 .btn-gold:active { transform: translateY(0); }
@@ -429,13 +429,13 @@ body {
   align-items: stretch;
   justify-content: stretch;
   width: 100%;
-  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 60%, #0A4674 100%);
+  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 60%, #051E30 100%);
   border-radius: 999px;
   padding: 16px 10px;
   margin-top: 14px;
   margin-bottom: 18px;
   box-shadow:
-    0 8px 28px rgba(13,84,139,0.28),
+    0 8px 28px rgba(8,43,66,0.28),
     inset 0 1px 0 rgba(255,255,255,0.1);
   gap: 0;
   position: relative;
@@ -483,9 +483,9 @@ body {
   height: 1px;
   background: linear-gradient(90deg,
     transparent,
-    rgba(13,84,139,0.2) 30%,
-    rgba(13,84,139,0.35) 50%,
-    rgba(13,84,139,0.2) 70%,
+    rgba(8,43,66,0.2) 30%,
+    rgba(8,43,66,0.35) 50%,
+    rgba(8,43,66,0.2) 70%,
     transparent
   );
   margin-bottom: 14px;
@@ -577,7 +577,7 @@ body {
   background: var(--blue-pale);
   border-color: var(--blue-light);
   color: var(--blue);
-  box-shadow: 0 4px 16px rgba(13,84,139,0.1);
+  box-shadow: 0 4px 16px rgba(8,43,66,0.1);
 }
 
 /* ── Mobile ── */

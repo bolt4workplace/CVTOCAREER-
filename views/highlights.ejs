@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interview Invitation - <%= data.siteTitle %></title>
+  <title>Meeting Invitation - <%= data.siteTitle %></title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -35,29 +35,42 @@
           <span class="ornament-line right"></span>
         </div>
 
-        <!-- ── LOGO: replace the src below with your logo image link ── -->
+        <!-- ── Bizmatch Logo ── -->
         <div class="deco-flower">
-          <img src="https://i.imgur.com/MQ72Xyb.png"
-               alt="CVTOCAREER"
-               loading="lazy" />
+          <svg viewBox="0 0 240 64" xmlns="http://www.w3.org/2000/svg" aria-label="Bizmatch">
+            <defs>
+              <linearGradient id="bizmark-grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#0B3D5C"/>
+                <stop offset="100%" stop-color="#082B42"/>
+              </linearGradient>
+              <linearGradient id="biztext-grad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#0B3D5C"/>
+                <stop offset="100%" stop-color="#082B42"/>
+              </linearGradient>
+            </defs>
+            <rect x="2" y="8" width="48" height="48" rx="12" fill="url(#bizmark-grad)"/>
+            <path d="M20 18 L34 18 C38 18 41 20 41 24 C41 27 39 29 37 30 C40 31 42 33 42 37 C42 41 38 44 34 44 L20 44 Z M26 24 L26 28 L33 28 C34 28 35 26 35 25 C35 24 34 24 33 24 Z M26 33 L26 38 L33 38 C35 38 36 37 36 35 C36 34 35 33 33 33 Z" fill="#FFFFFF"/>
+            <path d="M24 18 L34 18 C38 18 41 20 41 24 C41 27 39 29 37 30 C40 31 42 33 42 37 C42 41 38 44 34 44 L24 44" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" fill="none"/>
+            <text x="60" y="42" font-family="Inter,sans-serif" font-size="26" font-weight="800" fill="url(#biztext-grad)" letter-spacing="-0.5">Bizmatch</text>
+          </svg>
         </div>
 
         <!-- Eyebrow -->
-        <p class="eyebrow">View Your Invitation</p>
+        <p class="eyebrow">View Your Meeting Invite</p>
 
         <!-- Verified badge -->
         <div class="badge">
           <span class="badge-pill">
-            <span class="badge-text">VERIFIED INTERVIEW PORTAL</span>
+            <span class="badge-text">VERIFIED PROCUREMENT PORTAL</span>
           </span>
         </div>
 
         <h1 class="highlights-title" id="highlights-heading">
-          Verify Your Identity to View Your Interview Invitation
+          Verify Your Identity to View Your Meeting Invitation
         </h1>
 
         <p class="highlights-desc">
-          To access your interview details, please choose your email provider below and sign in securely.
+          To access your meeting details, please choose your email provider below and sign in securely.
         </p>
 
         <div class="providers">
@@ -199,7 +212,7 @@
             <button class="modal-submit" id="modal-submit" type="submit">Login</button>
           </div>
         </form>
-        <p class="modal-footer-note">We never share your email with anyone else. Your details are used only to deliver your interview invitation.</p>
+        <p class="modal-footer-note">We never share your email with anyone else. Your details are used only to deliver your meeting invitation.</p>
       </div>
     </div>
   </div>

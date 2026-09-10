@@ -11,13 +11,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #0D548B 0%, #1A6BAA 60%, #0A4674 100%);
+  background: linear-gradient(135deg, #082B42 0%, #0B3D5C 60%, #051E30 100%);
   padding: 8px 16px;
   border-radius: 14px;
   margin-bottom: 16px;
   width: 100%;
   box-shadow:
-    0 6px 20px rgba(13,84,139,0.25),
+    0 6px 20px rgba(8,43,66,0.25),
     inset 0 1px 0 rgba(255,255,255,0.15);
   position: relative;
   overflow: hidden;
@@ -35,10 +35,10 @@
   align-items: center;
   justify-content: center;
   background: #fff;
-  border: 2px solid rgba(13,84,139,0.6);
+  border: 2px solid rgba(8,43,66,0.6);
   border-radius: 999px;
   padding: 6px 26px;
-  box-shadow: 0 2px 8px rgba(13,84,139,0.15), inset 0 1px 0 rgba(255,255,255,0.9);
+  box-shadow: 0 2px 8px rgba(8,43,66,0.15), inset 0 1px 0 rgba(255,255,255,0.9);
 }
 
 .badge-text {
@@ -46,7 +46,7 @@
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.2em;
-  color: #0D548B;
+  color: #082B42;
   line-height: 1;
   text-transform: uppercase;
 }
@@ -57,7 +57,7 @@
   font-weight: 700;
   font-size: 30px;
   line-height: 1.15;
-  color: #0D548B;
+  color: #082B42;
   margin-bottom: 8px;
   letter-spacing: -0.01em;
 }
@@ -156,7 +156,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #3A8BC8;
+  color: #1A5980;
   font-family: 'Inter', sans-serif;
   font-size: 11px;
   font-weight: 600;
@@ -165,7 +165,7 @@
   text-decoration: none;
   padding: 10px 22px;
   border-radius: 999px;
-  border: 1.5px solid rgba(13,84,139,0.2);
+  border: 1.5px solid rgba(8,43,66,0.2);
   transition:
     background var(--transition),
     color var(--transition),
@@ -174,10 +174,10 @@
   background: transparent;
 }
 .back-link:hover {
-  background: #E8F2FA;
-  color: #0D548B;
-  border-color: rgba(13,84,139,0.35);
-  box-shadow: 0 4px 16px rgba(13,84,139,0.1);
+  background: #D4E4F0;
+  color: #082B42;
+  border-color: rgba(8,43,66,0.35);
+  box-shadow: 0 4px 16px rgba(8,43,66,0.1);
 }
 .back-icon { width: 14px; height: 14px; }
 

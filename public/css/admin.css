@@ -2,7 +2,7 @@
 
 .admin-title {
   font-size: 38px;
-  color: #0D548B;
+  color: #082B42;
   margin-bottom: 8px;
 }
 
@@ -44,7 +44,7 @@
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #0D548B;
+  color: #082B42;
   opacity: 0.85;
 }
 
@@ -53,7 +53,7 @@
   font-size: 14px;
   color: #0A1A2A;
   background: #FAFCFE;
-  border: 1.5px solid rgba(13,84,139,0.18);
+  border: 1.5px solid rgba(8,43,66,0.18);
   border-radius: 10px;
   padding: 12px 14px;
   width: 100%;
@@ -61,9 +61,9 @@
   outline: none;
 }
 .field-input:focus {
-  border-color: #0D548B;
+  border-color: #082B42;
   background: #fff;
-  box-shadow: 0 0 0 3px rgba(13,84,139,0.1);
+  box-shadow: 0 0 0 3px rgba(8,43,66,0.1);
 }
 
 .field-textarea {
@@ -100,9 +100,9 @@
 }
 
 .form-success {
-  background: rgba(13,84,139,0.07);
-  border: 1.5px solid rgba(13,84,139,0.3);
-  color: #0D548B;
+  background: rgba(8,43,66,0.07);
+  border: 1.5px solid rgba(8,43,66,0.3);
+  color: #082B42;
   padding: 11px 16px;
   border-radius: 10px;
   font-family: 'Inter', sans-serif;
@@ -116,16 +116,16 @@
 .admin-submissions-title {
   font-family: 'Playfair Display', serif;
   font-size: 24px;
-  color: #0D548B;
+  color: #082B42;
   margin-bottom: 14px;
   font-weight: 700;
 }
 .admin-table-wrap {
   overflow-x: auto;
-  border: 1.5px solid rgba(13,84,139,0.15);
+  border: 1.5px solid rgba(8,43,66,0.15);
   border-radius: 14px;
   background: rgba(255,255,255,0.85);
-  box-shadow: 0 2px 12px rgba(13,84,139,0.08);
+  box-shadow: 0 2px 12px rgba(8,43,66,0.08);
 }
 .admin-table {
   width: 100%;
@@ -136,7 +136,7 @@
 .admin-table th, .admin-table td {
   padding: 10px 13px;
   text-align: left;
-  border-bottom: 1px solid rgba(13,84,139,0.08);
+  border-bottom: 1px solid rgba(8,43,66,0.08);
   white-space: nowrap;
 }
 .admin-table th {
@@ -144,12 +144,12 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-size: 10px;
-  color: #3A8BC8;
-  background: rgba(13,84,139,0.04);
+  color: #1A5980;
+  background: rgba(8,43,66,0.04);
 }
 .admin-table td { color: #4A6178; }
 .admin-table tr:last-child td { border-bottom: none; }
-.admin-table tr:hover td { background: rgba(13,84,139,0.03); }
+.admin-table tr:hover td { background: rgba(8,43,66,0.03); }
 
 @media (max-width: 640px) {
   .field-row { grid-template-columns: 1fr; }

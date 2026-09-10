@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admin - CVTOCAREER Invitation Manager</title>
+  <title>Admin - Bizmatch Invitation Manager</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -11,11 +11,11 @@
   <link rel="stylesheet" href="/css/admin.css" />
   <style>
     .admin-submissions { margin-top: 36px; }
-    .admin-submissions-title { font-family: 'Playfair Display', serif; font-size: 22px; color: #0D548B; margin-bottom: 14px; }
-    .admin-table-wrap { overflow-x: auto; border: 1px solid rgba(13,84,139,0.2); border-radius: 12px; background: rgba(255,255,255,0.6); }
+    .admin-submissions-title { font-family: 'Playfair Display', serif; font-size: 22px; color: #082B42; margin-bottom: 14px; }
+    .admin-table-wrap { overflow-x: auto; border: 1px solid rgba(8,43,66,0.2); border-radius: 12px; background: rgba(255,255,255,0.6); }
     .admin-table { width: 100%; border-collapse: collapse; font-family: 'Inter', sans-serif; font-size: 12px; }
-    .admin-table th, .admin-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid rgba(13,84,139,0.12); white-space: nowrap; }
-    .admin-table th { font-weight: 600; color: #3A8BC8; background: rgba(13,84,139,0.06); }
+    .admin-table th, .admin-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid rgba(8,43,66,0.12); white-space: nowrap; }
+    .admin-table th { font-weight: 600; color: #1A5980; background: rgba(8,43,66,0.06); }
     .admin-table td { color: #4A6178; }
     .admin-table tr:last-child td { border-bottom: none; }
   </style>
@@ -73,17 +73,17 @@
 
             <div class="field-row">
               <label class="field">
-                <span class="field-label">Interview Date</span>
+                <span class="field-label">Meeting Date</span>
                 <input class="field-input" type="text" name="eventDate" value="<%= data.eventDate %>" required />
               </label>
               <label class="field">
-                <span class="field-label">Interview Time</span>
+                <span class="field-label">Meeting Time</span>
                 <input class="field-input" type="text" name="eventTime" value="<%= data.eventTime %>" required />
               </label>
             </div>
 
             <label class="field">
-              <span class="field-label">Interview Venue</span>
+              <span class="field-label">Meeting Venue</span>
               <input class="field-input" type="text" name="eventVenue" value="<%= data.eventVenue %>" required />
             </label>
 
